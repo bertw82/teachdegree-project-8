@@ -1,2 +1,2 @@
-# teachdegree-project-8
+# techdegree-project-8
  API Employee Directory
