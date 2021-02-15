@@ -1,0 +1,46 @@
+// Create Flex container
+@mixin flexy(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null,
+  $align: null,) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $align;
+  }
+
+// create grid container
+@mixin grid(
+  $disp: null,
+  $gt-col: null,
+  $gt-row: null,
+  $gt-area: null,
+  $gr-col: null,
+  $gr-gap: null,) {
+    display: $disp;
+    grid-template-columns: $gt-col;
+    grid-template-rows: $gt-row;
+    grid-template-areas: $gt-area;
+    grid-column: $gr-col;
+    grid-gap: $gr-gap;
+  }
+
+// Media Queries
+@mixin mq($break) {
+  @if $break == sm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $break == med {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $break == lg {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+ }
