@@ -5,10 +5,14 @@ generateCard = data => {
     section.className = "employee-card";
     employeesGrid.appendChild(section);
     section.innerHTML = `
-        <img src="${data.picture.medium}">
-        <h2>${data.name.first} ${data.name.last}</h2>
-        <p>${data.email}</p>
-        <p>${data.location.city}</p>
+        <div>
+            <img src="${data.picture.large}">
+        </div>
+        <div>
+            <h2>${data.name.first} ${data.name.last}</h2>
+            <p>${data.email}</p>
+            <p>${data.location.city}</p>
+        </div>
     `;
 }
 
@@ -30,6 +34,8 @@ function fetchData(url) {
 for (let i = 0; i < 12; i++) {
     fetchData('https://randomuser.me/api/');
 }
+
+fetchData('https://randomuser.me/api/?results=12');
 
 
 

@@ -345,6 +345,45 @@ template {
 
 body {
   font-family: "Newsreader", serif;
+  text-align: center;
+}
+
+.employee-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.625em;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  margin-left: 0.625em;
+  margin-right: 0.625em;
+}
+@media (min-width: 768px) {
+  .employee-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.employee-card img {
+  border-radius: 50%;
+}
+
+#employees {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 200px);
+  grid-gap: 20px;
+}
+@media (min-width: 768px) {
+  #employees {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  #employees {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

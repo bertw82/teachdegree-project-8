@@ -1,0 +1,15 @@
+
+
+.employee-card {
+    @include flexy($just: space-around, $dir: column, $align: center);
+    padding: ems(10);
+    border: 2px solid $border;
+    margin-left: ems(10);
+    margin-right: ems(10);
+    @include mq(med) {
+        @include flexy($dir: row, $just: flex-start)
+    }
+    img {
+        border-radius: 50%;
+    }
+}
