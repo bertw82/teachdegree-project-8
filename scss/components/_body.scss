@@ -5,23 +5,31 @@
     margin-left: ems(10);
     margin-right: ems(10);
     @include mq(med) {
-        @include flexy($dir: row);
+        @include flexy($dir: row, $just: flex-start);
         margin-left: 0;
         margin-right: 0;
     }
     img {
         border-radius: 50%;
+        @include mq(med) {
+            margin-left: ems(5);
+        }
     }
     div + div {
         padding-top: ems(10);
         @include mq(med) {
             padding-top: 0;
-            padding-left: ems(10);
+            padding-left: ems(15);
         } 
     }    
-    h2 ~ p {
-        font-size: .9rem;
-    }
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 footer {

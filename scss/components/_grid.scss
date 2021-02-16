@@ -1,3 +1,4 @@
+// employee card container
 #employees {
     @include grid($disp: grid, $gt-col: 1fr, $gr-gap: 15px);
     @include mq(med) {

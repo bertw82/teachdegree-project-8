@@ -1,0 +1,53 @@
+// modal background
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $border;
+}
+
+// close button
+.close {
+    color: $black;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    &:hover,
+    &:focus {
+        color: lighten($black, 20%);
+        text-decoration: none;
+        cursor: pointer;
+    }
+  }
+  
+
+
+// modal content
+.employee-modal {
+    padding: ems(20) ems(10);
+    width: 90%;
+    position: relative;
+    text-align: center;
+    background: $background-color;
+    border-radius: 5px;
+    margin: 10% auto auto;
+    @include mq(med) {
+        width: 375px;
+        margin: 15% auto auto;
+    }
+    img {
+        border-radius: 50%;
+    }
+}
+
+.address {
+    padding-top: ems(15);
+    border-top: 1px solid $border;
+    margin-top: ems(15); 
+}
