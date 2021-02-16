@@ -86,8 +86,7 @@ modalContainer.addEventListener('click', e => {
 });
 
 // navigate left or right in modal window
-const myModal = document.getElementById('myModal');
-myModal.addEventListener('click', e => {
+modalContainer.addEventListener('click', e => {
     const rightArrow = document.querySelector('.arrow-right');
     const leftArrow = document.querySelector('.arrow-left');
     const index = myModal.firstElementChild.getAttribute('data-index');
