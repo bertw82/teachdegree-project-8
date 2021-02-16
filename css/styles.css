@@ -339,7 +339,6 @@ template {
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
 }
 
@@ -347,13 +346,32 @@ body {
   font-family: "Newsreader", serif;
   text-align: center;
 }
+@media (min-width: 768px) {
+  body {
+    text-align: left;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 1em;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h2, p {
+  margin: 0.3125em;
+}
 
 .employee-card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 0.625em;
+  padding: 1em 0.625em;
   border: 2px solid rgba(0, 0, 0, 0.3);
   margin-left: 0.625em;
   margin-right: 0.625em;
@@ -362,27 +380,49 @@ body {
   .employee-card {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .employee-card img {
   border-radius: 50%;
 }
+.employee-card div + div {
+  padding-top: 0.625em;
+}
+@media (min-width: 768px) {
+  .employee-card div + div {
+    padding-top: 0;
+    padding-left: 0.625em;
+  }
+}
+.employee-card h2 ~ p {
+  font-size: 0.9rem;
+}
+
+footer {
+  padding: 0.625em;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+  margin-top: 1.25em;
+}
 
 #employees {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 200px);
-  grid-gap: 20px;
+  grid-gap: 15px;
 }
 @media (min-width: 768px) {
   #employees {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
 @media (min-width: 1024px) {
   #employees {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 150px);
   }
 }
 

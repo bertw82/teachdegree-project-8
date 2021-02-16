@@ -1,15 +1,31 @@
-
-
 .employee-card {
     @include flexy($just: space-around, $dir: column, $align: center);
-    padding: ems(10);
+    padding: ems(16) ems(10);
     border: 2px solid $border;
     margin-left: ems(10);
     margin-right: ems(10);
     @include mq(med) {
-        @include flexy($dir: row, $just: flex-start)
+        @include flexy($dir: row);
+        margin-left: 0;
+        margin-right: 0;
     }
     img {
         border-radius: 50%;
     }
+    div + div {
+        padding-top: ems(10);
+        @include mq(med) {
+            padding-top: 0;
+            padding-left: ems(10);
+        } 
+    }    
+    h2 ~ p {
+        font-size: .9rem;
+    }
+}
+
+footer {
+    padding: ems(10);
+    border-top: 2px solid $border;
+    margin-top: ems(20);
 }

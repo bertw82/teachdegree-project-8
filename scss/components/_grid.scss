@@ -1,9 +1,11 @@
 #employees {
-    @include grid($disp: grid, $gt-col: 1fr, $gt-row: repeat(12, 200px), $gr-gap: 20px);
+    @include grid($disp: grid, $gt-col: 1fr, $gr-gap: 15px);
     @include mq(med) {
-        @include grid($gt-col: repeat(2, 1fr));
+        @include grid($gt-col: repeat(2, 1fr), $gt-row: repeat(6, 150px));
+        margin-left: 1em;
+        margin-right: 1em;
     }
     @include mq(lg) {
-        @include grid($gt-col: repeat(3, 1fr));
+        @include grid($gt-col: repeat(3, 1fr), $gt-row: repeat(4, 150px));
     }
 }

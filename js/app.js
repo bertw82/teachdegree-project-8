@@ -7,9 +7,9 @@ function generateCard(data){
         employeesGrid.appendChild(section);
         section.innerHTML = `
             <div>
-                <img src="${person.picture.large}">
+                <img src="${person.picture.medium}">
             </div>
-            <div>
+            <div class="person-info">
                 <h2>${person.name.first} ${person.name.last}</h2>
                 <p>${person.email}</p>
                 <p>${person.location.city}</p>
