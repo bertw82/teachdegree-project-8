@@ -459,7 +459,7 @@ footer {
 
 .close {
   color: #000;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   position: absolute;
   right: 15px;
@@ -469,6 +469,24 @@ footer {
   color: #333333;
   text-decoration: none;
   cursor: pointer;
+}
+
+.arrow-left, .arrow-right {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  padding: 0.3125em;
+  font-weight: bold;
+  position: absolute;
+  top: 65px;
+  cursor: pointer;
+}
+
+.arrow-right {
+  right: 15px;
+}
+.arrow-left {
+  left: 15px;
 }
 
 .employee-modal {

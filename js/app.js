@@ -33,7 +33,7 @@ function generateCard(data){
 }
 
 // fetch functionality
-fetch('https://randomuser.me/api/?results=12')
+fetch('https://randomuser.me/api/?results=12&nat=us')
     .then(response => response.json())
     .then(data => generateCard(data.results))
     .catch( err => {
@@ -45,8 +45,10 @@ fetch('https://randomuser.me/api/?results=12')
 function modalDisplay(index) {
     const person = employees[index];
     const modalHTML = `
-    <section class="employee-modal">
+    <section class="employee-modal" data-index="${index}">
         <span class="close">&times;</span>
+        <span class="arrow-right">&#8594;</span>
+        <span class="arrow-left">&#8592;</span>
         <div>
             <img src="${person.picture.large}">
         </div>
@@ -83,4 +85,18 @@ modalContainer.addEventListener('click', e => {
     }
 });
 
+// navigate left or right in modal window
+const myModal = document.getElementById('myModal');
+myModal.addEventListener('click', e => {
+    const rightArrow = document.querySelector('.arrow-right');
+    const leftArrow = document.querySelector('.arrow-left');
+    const index = myModal.firstElementChild.getAttribute('data-index');
+    const addIndex = parseInt(index) + 1;
+    const subtractIndex = parseInt(index) - 1;
+    if (e.target === rightArrow && addIndex <= 11) {
+        modalDisplay(addIndex);
+    } else if (e.target === leftArrow && subtractIndex >= 0) {
+        modalDisplay(subtractIndex);
+    }
+});
 

@@ -13,7 +13,7 @@
 // close button
 .close {
     color: $black;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     position: absolute;
     right: 15px;
@@ -24,9 +24,30 @@
         text-decoration: none;
         cursor: pointer;
     }
-  }
-  
+}
+ 
+// right and left arrows
+%arrow {
+    color: $white;
+    background: $border;
+    font-size: 20px;
+    padding: ems(5);
+    font-weight: bold;
+    position: absolute;
+    top: 65px;
+    cursor: pointer;
+}
 
+.arrow {
+    &-right {
+        @extend %arrow;
+        right: 15px;
+    }
+    &-left {
+        @extend %arrow;
+        left: 15px;
+    }
+}
 
 // modal content
 .employee-modal {
