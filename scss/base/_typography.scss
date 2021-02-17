@@ -14,7 +14,7 @@ body {
 
 h1 {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 1em;
 }
 
@@ -24,6 +24,9 @@ h2 {
 
 h2, p {
     margin: ems(5);
+    .employee-modal & {
+        margin: ems(5);
+    }
 }
 
 p {

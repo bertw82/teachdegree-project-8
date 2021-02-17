@@ -355,7 +355,7 @@ body {
 
 h1 {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1em;
 }
 
@@ -364,6 +364,9 @@ h2 {
 }
 
 h2, p {
+  margin: 0.3125em;
+}
+.employee-modal h2, .employee-modal p {
   margin: 0.3125em;
 }
 
@@ -375,6 +378,56 @@ footer {
   text-align: center;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  h1 {
+    flex-basis: 330px;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    flex-basis: auto;
+  }
+}
+
+input {
+  padding: 0.625em;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  background-color: lightgray;
+  border-radius: 5px;
+  width: 280px;
+  margin-bottom: 2em;
+}
+@media (min-width: 768px) {
+  input {
+    margin-right: 1em;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  input {
+    width: 400px;
+  }
+}
+input:focus {
+  border: 2px solid orangered;
+  background-color: whitesmoke;
+}
+
 .employee-card {
   display: flex;
   flex-direction: column;
@@ -384,6 +437,7 @@ footer {
   border: 2px solid rgba(0, 0, 0, 0.4);
   margin-left: 0.625em;
   margin-right: 0.625em;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .employee-card {
@@ -479,6 +533,7 @@ footer {
   font-weight: bold;
   position: absolute;
   top: 65px;
+  border-radius: 5px;
   cursor: pointer;
 }
 

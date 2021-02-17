@@ -1,6 +1,7 @@
 const employeesGrid = document.getElementById('employees');
 let employees = [];
 const modalContainer = document.getElementById('myModal');
+const input = document.getElementById('myInput');
 
 // re-format birthdate 
 function birthday(bday) {
@@ -55,7 +56,6 @@ function modalDisplay(index) {
         <div>
             <h2>${person.name.first} ${person.name.last}</h2>
             <p>${person.email}</p>
-            <p>${person.location.city}</p>
         </div>
         <div class="address">
             <p>${person.phone}</p>
@@ -98,4 +98,24 @@ modalContainer.addEventListener('click', e => {
         modalDisplay(subtractIndex);
     }
 });
+
+// search filter function
+function searchFunction() {
+    const card = document.querySelectorAll('.employee-card');
+    const filter = input.value.toUpperCase();
+
+    for (let i = 0; i < card.length; i++) {
+        const h2 = card[i].querySelector('h2');
+        const name = h2.textContent;
+        if (name.toUpperCase().indexOf(filter) > -1) {
+            card[i].style.display = '';
+        } else {
+            card[i].style.display = 'none';
+        }
+    }
+}
+
+// clear search filter on page refresh
+window.onload = () => input.value = '';
+
 

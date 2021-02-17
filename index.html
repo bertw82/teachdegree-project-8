@@ -11,10 +11,17 @@
 <body>
     <header>
         <h1>Awesome StartUp Employee Directory</h1>
+        <div class="search">
+            <input type="text" id="myInput" onkeyup="searchFunction()" name="search" placeholder="Search for employee">
+        </div>
     </header>
     <main>
-        <div id="myModal" class="hide modal"></div>
-        <div id="employees"></div>     
+        <div id="myModal" class="hide modal">
+            <!-- employee modal card inserted by JS here -->
+        </div>
+        <div id="employees">
+            <!-- employee card inserted by JS here -->
+        </div>     
     </main>
     <footer>
         <p>&copy; Bert Witzel 2021</p>

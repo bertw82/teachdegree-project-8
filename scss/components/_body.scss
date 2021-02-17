@@ -1,9 +1,48 @@
+header {
+    @include flexy($dir: column, $align: center);
+    @include mq(med) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+h1 {
+    margin: 0;
+    @include mq(med) {
+        flex-basis: 330px;
+    }
+    @include mq(lg) {
+        flex-basis: auto;
+    }
+}
+
+input {
+    padding: ems(10);
+    border: 2px solid $border;
+    background-color: lightgray;
+    border-radius: 5px;
+    width: 280px;
+    margin-bottom: 2em;
+    @include mq(med) {
+        margin-right: 1em;
+        margin-bottom: 0;
+    }
+    @include mq(lg) {
+        width: 400px;
+    }
+    &:focus {
+        border: 2px solid orangered;
+        background-color: whitesmoke;
+    }
+}
+
 .employee-card {
     @include flexy($just: space-around, $dir: column, $align: center);
     padding: ems(16) ems(10);
     border: 2px solid $border;
     margin-left: ems(10);
     margin-right: ems(10);
+    cursor: pointer;
     @include mq(med) {
         @include flexy($dir: row, $just: flex-start);
         margin-left: 0;

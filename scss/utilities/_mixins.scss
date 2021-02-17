@@ -4,12 +4,14 @@
   $dir: null,
   $wrap: null,
   $just: null,
-  $align: null,) {
+  $align: null,
+  $grow: null,) {
   display: $disp;
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $just;
   align-items: $align;
+  flex-grow: $grow;
   }
 
 // create grid container
